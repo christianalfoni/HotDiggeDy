@@ -3,6 +3,11 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval-source-map',
+  resolve: {
+    alias: {
+      'HotDiggeDy': path.resolve('src', 'index.js')
+    }
+  },
   module: {
     loaders: [{
       test: /\.js?$/,
@@ -11,7 +16,7 @@ module.exports = {
       query: {
         "presets": ["es2015", "stage-0"],
         "plugins": [
-          ["transform-react-jsx", { "pragma": "Lib.DOM" }]
+          ["transform-react-jsx", { "pragma": "HotDiggeDy.DOM" }]
         ]
       }
     }]

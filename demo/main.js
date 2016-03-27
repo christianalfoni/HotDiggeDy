@@ -1,10 +1,10 @@
-import Lib from '../src/index.js';
+import HotDiggeDy from 'HotDiggeDy';
 import Immutable from 'immutable';
 import {Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 import axios from 'axios';
 
-const app = Lib({
+const app = HotDiggeDy({
   posts: [],
   isLoading: false,
   error: null
@@ -30,7 +30,7 @@ const app = Lib({
   }
 });
 
-const Demo = Lib.Component((props, state, observables) => {
+const Demo = HotDiggeDy.Component((props, state, observables) => {
   return (
     <div>
       <h1>Number of posts {state('posts').size}</h1>
