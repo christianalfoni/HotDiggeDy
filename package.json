@@ -1,0 +1,31 @@
+{
+  "name": "observables-apps",
+  "version": "1.0.0",
+  "description": "Test project for using observables to build complex apps",
+  "main": "index.js",
+  "scripts": {
+    "start": "kotatsu serve -c webpack.config.js --index demo/index.tpl.html demo/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianalfoni/observables-apps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christianalfoni/observables-apps/issues"
+  },
+  "homepage": "https://github.com/christianalfoni/observables-apps#readme",
+  "devDependencies": {
+    "kotatsu": "^0.13.0"
+  },
+  "dependencies": {
+    "axios": "^0.9.1",
+    "babel-plugin-transform-react-jsx": "^6.7.4",
+    "immutable": "^3.7.6",
+    "rxjs": "^5.0.0-beta.3",
+    "snabbdom": "^0.4.2",
+    "snabbdom-jsx": "^0.3.0"
+  }
+}
