@@ -13,6 +13,7 @@ const app = HotDiggeDy({
     const getPosts$ = observable
       .flatMap(() => Observable.fromPromise(axios.get('http://jsonplaceholder.typicode.com/posts')))
       .map(result => result.data)
+      .share();
 
     const resetPosts$ = observable.map(() => state => state.set('posts', Immutable.fromJS([])));
     const startFetching$ = observable.map(() => state => state.set('isLoading', true));
